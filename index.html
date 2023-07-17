@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Technomar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <img src="images/logo.png" alt="logo" class="resized-logo">
+    </header>
+    
+  <!-- product list -->
+  <main>
+    <div class="product">
+      <h2>Apple iPhone 14 Pro Max 128GB Purple MQ9T3</h2>
+      <img src="images/iph1.png" alt="iph" class="resized-image">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Price: $1400</p>
+      <button class="add-to-cart" onclick="addToCart('Apple iPhone 14 Pro Max 128GB Purple MQ9T3')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h2>Apple iPhone 14 Pro Max 128GB Gold MQ9R3</h2>
+      <img src="images/iph2.png" alt="iph" class="resized-image">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Price: $1550</p>
+      <button class="add-to-cart" onclick="addToCart('Apple iPhone 14 Pro Max 128GB Gold MQ9R3')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <h2>Apple iPhone 14 Pro Max 128GB Silver MQ9Q3</h2>
+        <img src="images/iph3.png" alt="iph" class="resized-image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Price: $1260</p>
+        <button class="add-to-cart" onclick="addToCart('Apple iPhone 14 Pro Max 128GB Silver MQ9Q3')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Apple iPhone 14 Pro Max 128GB Black MQ9P3</h2>
+        <img src="images/iph4.png" alt="iph" class="resized-image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Price: $1470</p>
+        <button class="add-to-cart" onclick="addToCart('Apple iPhone 14 Pro Max 128GB Black MQ9P3')">Add to Cart</button>
+      </div>
+
+      <!-- cart block -->
+      <div class="cart-block">
+        <h2>Your Cart</h2>
+        <div class="cart">
+            <ul id="cart-items"></ul>
+            <button class="checkout" onclick="checkout()">Checkout</button>
+        </div>
+        
+      </div>
+  </main>
+  <!-- footer -->
+  <footer>
+    <p>&copy; Made by Valentins Samsonovs for Veloce Bootcamp 2023. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

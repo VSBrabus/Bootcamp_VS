@@ -9,6 +9,8 @@
 }
 body {
     background: var(--light-cream);
+    margin: 0;
+    padding: 0;
   }
   
   header {
@@ -162,17 +164,15 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; /* 19.2px */
-  }
-  .coffee-price{
-    display: flex;
-    padding: 2px 6px;
-    align-items: flex-start;
-    gap: 10px;
     border-radius: 16px;
     background: var(--orange);
-
+    height: 19px;
+    padding: 2px 6px ;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
   }
+  
 
   .description{
     display: flex;
@@ -220,8 +220,8 @@ body {
   .product-price{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     width: 100%;
+    padding-top: 24px;
   }
 
   .product button{

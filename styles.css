@@ -1,130 +1,71 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
+*{
+  --light-cream: #FEF2E8;
+  --white: #FFF;
+  --orange: #ff7733;
+  --deep-blue: #023A6B;
+  --yellow: #FFBD5C;
+}
 body {
-    /* width: 1440px;
-    height: 900px; */
-    background: var(--light-cream, #FEF2E8);
+    background: var(--light-cream);
   }
   
   header {
     display: flex;
-    /* width: 1440px; */
     padding: 24px 32px;
     justify-content: space-between;
     align-items: center;
-    background: var(--white, #FFF);
+    background: var(--white);
   }
-  @media screen and (max-width: 500px) {
-    .vcshop {
-        width: 50%;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .slogan p{
-        font-size: 24px;
-        padding-left: 24px;
-        width: 90%;
-    }
-  }
-  @media screen and (max-width: 900px) {
-    .slogan p{
-        
-        padding-left: 24px;
-    }
-  }
-  @media screen and (max-width: 900px) {
-    .container {
-       
-        padding: 24px 24px;
-    }
-  }
-  @media screen and (max-width: 900px) {
-    .shopcart {
-        width: 140px;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .header {
-        
-        padding: 24px 24px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .shopcart {
-        width: 120px;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .container {
-        max-width: 450px;
-        padding: 24px 24px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .ml .sug {
-        font-size: 12px;
-    }
-  }
+  
 
   main {
     width: 100%;
     display: flex;
-    /* padding-left: 240px; */
-    /* flex-wrap: wrap; */
     justify-content: center
-    /* flex-direction: column; */
-
-    /* display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    flex-direction: column; */
-    /* gap: 20px;
-    margin: 20px; */
   } 
 
   .container {
-    /* padding-left: 240px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
 
   }
 
-   input[type='radio']:after {
+  input[type='radio']:after,
+  input[type='checkbox']:after{
     width: 20px;
     height: 20px;
     border-radius: 15px;
     top: -10px;
     left: -5px;
     position: relative;
-    background-color: white;
+    background-color: var(--white);
     content: '';
     display: inline-block;
     visibility: visible;
-    border: 4px solid white;
-    }
+    border: 4px solid var(--white);
+  }
 
-   input[type='radio']:checked:after {
+  input[type='radio']:checked:after,
+  input[type='checkbox']:checked:after {
     width: 20px;
     height: 20px;
     border-radius: 15px;
     top: -10px;
     left: -5px;
     position: relative;
-    background-color: #ff7733;
+    background-color: var(--orange);
     content: '';
     display: inline-block;
     visibility: visible;
-    border: 4px solid white;
-    }
+    border: 4px solid var(--white);
+    transition: 0.6s;
+  }
 
-  .vcshop{
+  .veloce-coffee-shop{
     display: flex;
-    /* width: 232px;
-    height: 48px; */
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -132,7 +73,7 @@ body {
 
   }
 
-  .shopcart{
+  .shopping-cart{
     display: flex;
     padding-right: 0px;
     align-items: center;
@@ -141,48 +82,71 @@ body {
 
   .slogan{
     max-width: 792px;
-    /* width: auto; */
-    color: var(--orange, #023A6B);
-    font-family: Eczar;
+    color: var(--deep-blue);
+    font-family: "Eczar", serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
-    /* width: 100%; */
-    /* padding-left: 240px; */
-    /* padding-right: 408px; */
     margin-left: 0;
-    
   }
 
   .pleasures {
-    color: var(--orange, #F73);
-    font-family: Eczar;
+    color: var(--orange);
+    font-family: "Eczar", serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
   }
 
-  .ctitle{
-    color: var(--deep-blue, #023A6B);
-    font-family: Eczar;
+  .coffee-title{
+    color: var(--deep-blue);
+    font-family: "Eczar", serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 38.4px */
   }
   .product-list{
-    /* width: 100%; */
-    /* padding-left: 240px; */
-    /* padding-right: 240px; */
     display: flex;
     flex-wrap: wrap;
     max-width: 960px;
     align-items: flex-start;;
-    /* justify-content: center; */
     gap: 48px;
+  }
 
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-container {
+    position: relative;
+    width: 264px;
+    height: 220px;
+    flex-shrink: 0;
+    column-gap: 24px;
+  }
+  
+  .spinner-container {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    animation: spin 4s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .product img{
@@ -192,21 +156,21 @@ body {
     column-gap: 24px;
   }
 
-  .cpriced{
-    color: var(--white, #FFF);
-    font-family: Eczar;
+  .coffee-price-div{
+    color: var(--white);
+    font-family: "Eczar", serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 19.2px */
   }
-  .cprice{
+  .coffee-price{
     display: flex;
     padding: 2px 6px;
     align-items: flex-start;
     gap: 10px;
     border-radius: 16px;
-    background: var(--orange, #F73);
+    background: var(--orange);
 
   }
 
@@ -219,33 +183,19 @@ body {
 
   }
 
-  .radioButton{
+  .radio-button{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
 
-  .ml{
+  .coffee-volume{
     display: flex;
-    /* width: 288px; */
     align-items: flex-start;
     gap: 24px; 
-    color: var(--deep-blue, #023A6B);
-    font-family: Open Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%; /* 16.8px */
-    text-transform: uppercase;
-  }
-  .sug{
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    align-self: stretch;
-    color: var(--deep-blue, #023A6B);
-    font-family: Open Sans;
+    color: var(--deep-blue);
+    font-family: "Open Sans", "Helvetica Neve", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -253,7 +203,21 @@ body {
     text-transform: uppercase;
   }
 
-  .PandP{
+  .sugar{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    color: var(--deep-blue);
+    font-family: "Open Sans", "Helvetica Neve", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 16.8px */
+    text-transform: uppercase;
+  }
+
+  .product-price{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -262,18 +226,15 @@ body {
 
   .product button{
     display: flex;
-    /* width: 141px; */
-    /* height: 48px; */
     padding: 16px 24px;
     justify-content: center;
-    background-color: var(--light-cream, #FEF2E8);
+    background-color: var(--light-cream);
     align-items: center;
     gap: 10px;
     border-radius: 64px;
-    border: 2px solid var(--yellow, #FFBD5C);
-
-    color: var(--deep-blue, #023A6B);
-    font-family: Open Sans;
+    border: 2px solid var(--yellow);
+    color: var(--deep-blue);
+    font-family: "Open Sans", "Helvetica Neve", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -281,13 +242,63 @@ body {
     text-transform: uppercase;
   }
 
-  .AandI{
+  .product button:hover {
+    background-color: var(--yellow);
+    transition: 0.3s;
+  }
+
+  .addtocart-info object:hover {
+    border-radius: 64px;
+    border: 2px solid var(--yellow);
+  } 
+
+  .addtocart-info{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
     width: 100%;
   }
+
+  @media screen and (max-width: 500px) {
+    .veloce-coffee-shop {
+      width: 50%;
+    }
+    .slogan p{
+      font-size: 24px;
+      padding-left: 24px;
+      width: 90%;
+    }
+    .header {
+      padding: 24px 24px;
+    }
+    .shopping-cart {
+      width: 120px;
+    }
+    .container {
+      max-width: 450px;
+      padding: 24px 24px;
+    }
+    .coffee-volume .sugar {
+      font-size: 12px;
+    }
+    .pleasures{
+      font-size: 24px ;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .slogan p{
+      padding-left: 24px;
+    }
+    .container {
+      padding: 24px 24px;
+    }
+    .shopping-cart {
+      width: 140px;
+    }
+  }
+
 
 
 

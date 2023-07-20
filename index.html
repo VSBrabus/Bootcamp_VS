@@ -12,12 +12,18 @@
     <header>
         <!-- logo+grain -->
         <div class="veloce-coffee-shop">
-            <img src="/images/logo.svg" alt="logo">
-            <img src="/images/coffeeshop.svg" alt="coffeeshop">
+            <img src="/images/logo.svg"  id="logo-img" alt="logo">
+            <img src="/images/coffeeshop.svg" id="logo-text-img" alt="coffeeshop">
         </div>
         <!-- shopping cart -->
         <div class="shopping-cart">
-            <img src="/images/shoppingcart.svg" alt="shoppingcart">
+            <div class="shopping-cart-logo">
+                <img class="shopping-cart-image" id="shopping-cart-image" src="/images/Shopping_Cart_stand.svg" alt="shoppingcart">
+                <span class="number-of-products-added" id="clickCount"></span>
+            </div>
+            <div class="shopping-cart-text">
+                <span class="shopping-text">Shopping cart</span>
+            </div>
         </div>
     </header>
 
@@ -60,7 +66,7 @@
                         </form>
 
                         <div class="addtocart-info">
-                            <button type="button" onclick="alert('Hello world!')">add to cart</button>
+                            <button type="button" onclick="updateClickCount()">add to cart</button>
                             <object data="/images/info.svg"></object>
                         </div>
                     </div>
@@ -90,7 +96,7 @@
                         </form>
 
                         <div class="addtocart-info">
-                            <button type="button" onclick="alert('Hello world!')">add to cart</button>
+                            <button type="button" onclick="updateClickCount()">add to cart</button>
                             <object data="/images/info.svg"></object>
                         </div>
                     </div>
@@ -121,7 +127,7 @@
                         </form>
 
                         <div class="addtocart-info">
-                            <button type="button" onclick="alert('Hello world!')">add to cart</button>
+                            <button type="button" onclick="updateClickCount()">add to cart</button>
                             <object data="/images/info.svg"></object>
                             
                         </div>
@@ -131,7 +137,7 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

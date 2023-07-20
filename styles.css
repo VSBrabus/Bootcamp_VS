@@ -17,7 +17,7 @@ body {
     display: flex;
     padding: 24px 32px;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     background: var(--white);
   }
   
@@ -75,11 +75,68 @@ body {
 
   }
 
+  #logo-img{
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+  #logo-text-img{
+    width: 176px;
+    height: 44px;
+    flex-shrink: 0;
+
+  }
+  #logo-text-img:hover{
+    fill: var(--orange);
+    transition: 0.3s;
+  }
+
+
   .shopping-cart{
     display: flex;
-    padding-right: 0px;
+    padding-right: 32px;
     align-items: center;
     gap: 16px;  
+  }
+  .shopping-cart-logo{
+    position: relative;
+    display: inline-block;
+  }
+
+  .shopping-cart-image{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .number-of-products-added{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    text-align: center;
+    font-family: "Eczar", serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%; /* 20px */
+    text-transform: uppercase;
+  }
+
+  .shopping-cart-text{
+    color: var(--deep-blue);
+    font-family: "Open Sans", "Helvetica Neve", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+    text-transform: uppercase;
+    width: 84px;
+  }
+
+  .shopping-cart-text:hover {
+    color: var(--orange);
+    transition: 0.3s;
   }
 
   .slogan{
@@ -240,6 +297,7 @@ body {
     font-weight: 700;
     line-height: 16px; /* 114.286% */
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   .product button:hover {
@@ -260,7 +318,20 @@ body {
     width: 100%;
   }
 
-  @media screen and (max-width: 500px) {
+
+  @media screen and (max-width: 1200px) {
+    .slogan p{
+      padding-left: 24px;
+    }
+    .container {
+      padding: 24px 24px;
+    }
+    .shopping-cart {
+      width: 140px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
     .veloce-coffee-shop {
       width: 50%;
     }
@@ -269,11 +340,12 @@ body {
       padding-left: 24px;
       width: 90%;
     }
-    .header {
+    header {
       padding: 24px 24px;
     }
     .shopping-cart {
-      width: 120px;
+      width: 40px;
+      align-items: end;
     }
     .container {
       max-width: 450px;
@@ -285,17 +357,18 @@ body {
     .pleasures{
       font-size: 24px ;
     }
-  }
-
-  @media screen and (max-width: 900px) {
-    .slogan p{
-      padding-left: 24px;
+    .shopping-cart-text{
+      display: none;
     }
-    .container {
-      padding: 24px 24px;
+    #logo-img{
+      width: 31.862px;
+      height: 34px;
+      flex-shrink: 0;
     }
-    .shopping-cart {
-      width: 140px;
+    #logo-text-img{
+      width: 116.828px;
+      height: 31.167px;
+      flex-shrink: 0;
     }
   }
 
